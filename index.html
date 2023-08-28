@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI HUB</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      #fontSize {
+        font-family: Work Sans;
+      }
+    </style>
+  </head>
+  <body id="fontSize">
+    <header class="max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12 py-5 my-5">
+      <h1 class="text-4xl text-center md:text-5xl lg:text-7xl font-semibold">
+        AI Universe Hub
+      </h1>
+      <div class="text-center mt-7 mb-20">
+        <button
+          class="hover:bg-[#e93737] font-normal text-xl text-white bg-[#EB5757] px-4 py-3 rounded-lg"
+        >
+          Sort By Date
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12 py-5 my-5">
+        <!-- main div -->
+        <div
+          id="getDivAppend"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <!-- card  -->
+        </div>
+
+        <!-- seemore button  -->
+        <div class="text-center my-5 md:my-10">
+          <button
+            id="btn-seeMore"
+            onclick="seeMore()"
+            class="px-4 py-3 rounded-xl text-white font-semibold bg-[#0D6EFD] hidden"
+          >
+            See More
+          </button>
+        </div>
+
+        <!-- modal  -->
+        <div >
+          <!-- You can open the modal using ID.showModal() method -->
+          
+          <dialog id="aiDetails" class="modal ">
+            <form method="dialog" class="modal-box max-w-[400px] md:max-w-[800px]">
+              <button
+                class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </button>
+              <div id="showModalDetails">
+
+              </div>
+            </form>
+          </dialog>
+        </div>
+      </section>
+    </main>
+    
+
+    <!-- script  -->
+    <script src="index.js"></script>
+  </body>
+</html>
